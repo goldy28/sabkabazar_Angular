@@ -1,0 +1,13 @@
+.page-footer {
+    background-color: #eee;
+    font-size: 0.8em;
+}
+@media (min-width: 900px){
+    .page-footer {
+        padding: 0.5% 10%;
+    }
+}
+footer{
+    width: 100%;
+    float: left;
+}

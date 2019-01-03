@@ -1,0 +1,25 @@
+.innerContainer{
+    float:left;    width: 100%;
+}
+aside {
+    background: #eee;
+    color: #666;
+    font-family: dosis;
+    height: 100%;
+    float: left;
+    width: 30%;
+}
+aside ul {padding-left: 3%;}
+aside ul li{
+    line-height: 36px;
+    border-bottom: 1px #ccc solid;
+    list-style: none;
+    padding-left: 5%;
+}
+aside ul li a{
+    cursor: pointer;
+}
+.rightSection{
+    float: right;
+    width: 69%;
+}
