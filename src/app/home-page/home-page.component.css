@@ -1,95 +1,54 @@
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+.mainHome  {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
 }
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.mainHome  .category {
+  display: flex;
+  flex-direction: row;
+  margin: 5% auto;
 }
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.mainHome  .category .menu-items {
+  display: flex;
+  align-items: center;
+  width: 35%;
 }
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+.mainHome  .category .menu-items img {
   width: 100%;
+}
+.mainHome  .category .description {
+  width: 65%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
+.mainHome  .category .description * {
+  margin: 5% auto;
   display: inline-block;
-  transition: background-color 0.6s ease;
+}
+@media (min-width: 900px) {
+  .mainHome  .category .description * {
+    margin: 2% auto;
+  }
+}
+.mainHome  .category .description a {
+  background-color: #BD2A57;
+  color: white;
+  padding: 3%;
+  text-decoration: none;
 }
 
-.active, .dot:hover {
-  background-color: #717171;
+.categoryBorder {
+  background: radial-gradient(at 50% 0, #8a8888, transparent 50%);
+  background-size: 100% 8px;
+  background-repeat: no-repeat;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
+.category:nth-child(4n) .menu-items {
+  order: 2;
 }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
+.menuright{
+  order:1;
 }

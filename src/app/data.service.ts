@@ -10,9 +10,9 @@ import { Observable } from '../../node_modules/rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private bannerUrl:string = 'http://localhost:5000/banners'
-  private categoryURL:string = 'http://localhost:5000/categories'
-  private productURL:string = 'http://localhost:5000/products'
+  private bannerUrl:string = 'http://localhost:5500/banners'
+  private categoryURL:string = 'http://localhost:5500/categories'
+  private productURL:string = 'http://localhost:5500/products'
 
   constructor(private http: HttpClient) { }
 

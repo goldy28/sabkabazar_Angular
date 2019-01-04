@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "canned": "canned -p 5000 ./src/assets/server",
+    "canned": "canned -p 5500 ./src/assets/server",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

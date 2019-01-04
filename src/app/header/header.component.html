@@ -1,29 +1,35 @@
-<header class= "headerClass">
-    <section class="logoSection">
-        <a routerLink= "/"><img class="headerLogoImage" src="./assets/static/images/logo.png" alt=""/></a>
-    </section>
-    <section class="rightSection">
-        <section class="rightTopSection">
-            <article class="linksLogs">
-                <a routerLink="/login">SignIn</a>
-                <a routerLink="/signup">Register</a>
-            </article>
-            
+<header>
+    <div class="headerClass">
+        <section class="logoSection">
+            <a routerLink="/">
+                <img class="headerLogoImage" src="./assets/static/images/logo.png" alt="" />
+            </a>
         </section>
-        <section class="rightBottomSection">
-            
-            <nav class="navSection">
-                <a  routerLink="/" class="homeButton">Home</a>
-                <a  routerLink="/products" class ="productButton">Products</a>
-            </nav>
-            
-            <section class="cartSection">
-                <a href = "/#/cart" >
-                    <img src="./assets/static/images/cart.svg" alt="" /><span class= "mainHeaderQty">0 Items</span>
-                </a>
-                
+        <section class="rightSection">
+            <section class="rightTopSection">
+                <article class="linksLogs">
+                    <a routerLink="/login">SignIn</a>
+                    <a routerLink="/signup">Register</a>
+                </article>
+
+            </section>
+            <section class="rightBottomSection">
+
+                <nav class="navSection">
+                    <a routerLink="/" class="homeButton">Home</a>
+                    <a routerLink="/products" class="productButton">Products</a>
+                </nav>
+
+                <section class="cartSection">
+                    <a href="/#/cart">
+                        <img src="./assets/static/images/cart.svg" alt="" />
+                        <span class="mainHeaderQty">{{0}} Items</span>
+                    </a>
+
+                </section>
             </section>
         </section>
-    </section>
+    </div>
+
 
 </header>

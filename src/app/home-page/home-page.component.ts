@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service'
+import { CartserviceService } from '../cartservice.service';
+import { Router } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-home-page',
@@ -9,39 +11,32 @@ import { DataService } from '../data.service'
 export class HomePageComponent implements OnInit {
 
   public dataList = [];
+  public categoryList = [];
 
-  constructor(private _dataList: DataService) { }
+  constructor(private _dataList: DataService, 
+            private router: Router
+            ,private cartService: CartserviceService) { }
 
   ngOnInit() {
     this._dataList.getBanners()
       .subscribe(data => this.dataList = data);
+    this._dataList.getCategories()
+      .subscribe(data => {
+      this.categoryList = data.sort((a, b) => a.order - b.order)
+        for (let ctr = 0; ctr < this.categoryList.length; ctr++) {
+          debugger
+          if (ctr % 2 == 0) {
+            this.categoryList["index"] = true;
+          }
+          else {
+            this.categoryList["index"] = false;
+          }
+        }
+      });
   }
 
-  // public slideIndex = 1;
-  // showSlides(slideIndex);
-
-  // plusSlides(n) {
-  //   this.showSlides(this.slideIndex += n);
-  // }
-
-  // currentSlide(n) {
-  //   this.showSlides(this.slideIndex = n);
-  // }
-
-  // showSlides(n) {
-  //   var i;
-  //   var slides = document.getElementsByClassName("mySlides");
-  //   var dots = document.getElementsByClassName("dot");
-  //   if (n > slides.length) { slideIndex = 1 }
-  //   if (n < 1) { slideIndex = slides.length }
-  //   for (i = 0; i < slides.length; i++) {
-  //     slides[i].style.display = "none";
-  //   }
-  //   for (i = 0; i < dots.length; i++) {
-  //     dots[i].className = dots[i].className.replace(" active", "");
-  //   }
-  //   slides[slideIndex - 1].style.display = "block";
-  //   dots[slideIndex - 1].className += " active";
-  // }
-
+  selectedItem(item) {
+    this.cartService.selectedProduct = item;
+    this.router.navigate(['/products']);
+  }
 }

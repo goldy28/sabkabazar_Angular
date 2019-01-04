@@ -1,0 +1,79 @@
+@import 'https://fonts.googleapis.com/css?family=Dosis:400,600,700';
+@import 'https://fonts.googleapis.com/css?family=Dosis:400,600,700';
+* {
+  font-family: Dosis;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+.loginMain {
+    margin-left: 13%;
+    display: flex;
+    flex-direction: row;
+  }
+  .loginMain .leftLogin {
+    margin: 3%;
+  }
+  .loginMain .leftLogin h1 {
+    font-size: 240%;
+  }
+  .loginMain .leftLogin h1, .loginMain .leftLogin p {
+    padding: 3% 0;
+    display: block;
+  }
+  .loginMain .rightLogin {
+    margin: 2% 0;
+  }
+  .loginMain .rightLogin form article {
+    margin: 3% 0;
+  }
+  .loginMain .rightLogin form article .inputText {
+    border: none;
+    border-bottom: 2px solid #cccccc;
+    padding-left: 5%;
+    background-color: inherit;
+    background-image: none;
+  }
+  .loginMain .rightLogin form article .inputText :focus {
+    border: none;
+    border-bottom: 2px solid #cccccc;
+  }
+  .loginMain .rightLogin form article a {
+    background-color: #BD2A57;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 3%;
+    text-decoration: none;
+  }
+  .loginMain .rightLogin input:focus ~ .floating-label,
+  .loginMain .rightLogin input:not(:focus):valid ~ .floating-label {
+    top: 8px;
+    bottom: 10px;
+    left: 20px;
+    font-size: 11px;
+    opacity: 1;
+  }
+  .loginMain .rightLogin .inputText {
+    font-size: 14px;
+    width: 400px;
+    height: 65px;
+  }
+  .loginMain .rightLogin .textfield {
+    position: relative;
+  }
+  .loginMain .rightLogin .floating-label {
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 18px;
+    transition: 0.2s ease all;
+  }
+  
+  /*# sourceMappingURL=signin.css.map */
+  
