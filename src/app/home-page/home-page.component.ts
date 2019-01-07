@@ -23,15 +23,15 @@ export class HomePageComponent implements OnInit {
     this._dataList.getCategories()
       .subscribe(data => {
       this.categoryList = data.sort((a, b) => a.order - b.order)
-        for (let ctr = 0; ctr < this.categoryList.length; ctr++) {
-          debugger
-          if (ctr % 2 == 0) {
-            this.categoryList["index"] = true;
-          }
-          else {
-            this.categoryList["index"] = false;
-          }
-        }
+        // for (let ctr = 0; ctr < this.categoryList.length; ctr++) {
+          
+        //   if (ctr % 2 == 0) {
+        //     this.categoryList["index"] = true;
+        //   }
+        //   else {
+        //     this.categoryList["index"] = false;
+        //   }
+        // }
       });
   }
 

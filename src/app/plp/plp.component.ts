@@ -23,6 +23,9 @@ export class PlpComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this._dataList.getCategories()
       .subscribe(data => this.categoryList = data);
+      this.categoryList.filter((item) =>{
+        return item.order ==  0;
+      });
     this._dataList.getProducts()
       .subscribe(data => {
         this.productList = data;
